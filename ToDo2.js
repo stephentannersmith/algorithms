@@ -20,7 +20,22 @@ function reverse(arr) {
 // Rotate
 // Implement rotateArr(arr, shiftBy) that accepts array and offset. Shift arr’s values to the right by that amount. ‘Wrap-around’ any values that shift off array’s end to the other side, so that no data is lost. Operate in-place: given ([1,2,3],1), change the array to [3,1,2]. Don’t use built-in functions.
 
-//
+// store the first value in a temp variable
+// create a forloop that takes the offset and shifts everything to the right by one index for the x amount of times
+// create a nested forloop that swaps each value with its right neighboring value
+
+function rotateArr(arr, offset) {
+    var temp = arr[0];
+
+    for (var x = 0; x < offset; x++) {
+        for(var i = 0; i < arr.length-1; i++) {
+            temp = arr[i+1];
+            arr[i+1] = arr[i];
+            arr[i] = temp;
+        }
+    }
+    return arr;
+}
 
 
 // Second: allow negative shiftBy (shift L, not R).
