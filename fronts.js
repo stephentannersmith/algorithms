@@ -31,7 +31,7 @@ class SLL {
         current.next = newNode;
     }
 
-    removeFront(value) {
+    removeFront() {
         if (this.head) {
             this.head = this.head.next;
         }
@@ -81,15 +81,47 @@ class SLL {
         return count;
     }
 
-    contains(value) {
+    contains() {
         var current = this.head;
         while(current) {
-            if (current == value) {
+            if (current == current.value) {
                 return true
             }
             current = current.next
         }
         return this
+    }
+
+    max() {
+        var current = this.head;
+        var max = this.head.value;
+        while (current) {
+            if (current.value > max) {
+                max = current.value
+            }
+            current = current.next
+        } 
+    }
+
+    min() {
+        var current = this.head;
+        var min = this.head.value;
+        while (current) {
+            if (current.value < min) {
+                min = current.value
+            }
+            current = current.next
+        } 
+    }
+
+    avg() {
+        var current = this.head;
+        var sum = 0;
+        while (current) {
+            sum += current.value;
+            current = current.next
+        }
+        return sum/this.length();
     }
 }
 
