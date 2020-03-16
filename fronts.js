@@ -67,6 +67,17 @@ class SLL {
             current = current.next;
         }
     }
+
+    contains(value) {
+        var current = this.head;
+        while(current) {
+            if (current == value) {
+                return true
+            }
+            current = current.next
+        }
+        return this
+    }
 }
 
 var myList = new SLL();
