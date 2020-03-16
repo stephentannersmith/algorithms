@@ -68,6 +68,19 @@ class SLL {
         }
     }
 
+    length() {
+        var current = this.head;
+        var count = 0;
+        if (current === null) {
+            return null;
+        }
+        while (current) {
+            count++
+            current = current.next
+        }
+        return count;
+    }
+
     contains(value) {
         var current = this.head;
         while(current) {
