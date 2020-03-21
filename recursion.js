@@ -19,10 +19,12 @@ function rFact(num) {
     if (num < 2) {
         return 1;
     }
-    else if (Number != typeof num) {
-        throw "Please use a valid integer";
+    else if (isNan(num)) {
+        throw "Please use a valid integer."
     }
-    return num * rFact(num-1);
+    
+    var intNum = Math.trunc(num)
+    return intNum * rFact(num-1);
 }
 
 var result = rFact(6.1);
