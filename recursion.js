@@ -29,13 +29,38 @@ function rFact(num) {
 
 var result = rFact(6.1);
 
-// Flood Fill
-// Most graphical “paint” applications have a ‘paintcan fill’ function that floods part of an image with a certain color. We change the image as if we painted a canvas: a two-dimensional array of integers, where each integer represents a color for that pixel. The canvas Array.length is the Y dimension of our canvas; each spot in the canvas array is a row in our image, with a length equal to our canvas’ X dimension. You are given a canvas (2-dimensional array of integers), starting coordinate (2-element array), and the color to flood (integer value). Build floodFill(canvas2D,startXY,newColor)! Replace a pixel’s color value only if it is the same color as the origin coordinate and is directly adjacent via X or Y to another pixel you will change. 
 
-// Note: diagonally related pixels are not considered adjacent.
+// Recursive Fibonacci
+// Write rFib(num). Recursively compute and return numth Fibonacci value. As earlier, treat first two (num = 0, num = 1) Fibonacci vals as 0 and 1. Examples: 
 
-// 
+// rFib(2) = 1 (0+1); 
 
-function floodFill(canvas2D,startXY,newColor) {
+// rFib(3) = 2 (1+1); 
 
+// rFib(4) = 3 (1+2); 
+
+// rFib(5) = 5 (2+3).rFib(3.65) = rFib(3) = 2, rFib(-2) = rFib(0) = 0.
+
+// find sum of the numbers leading up to the given number. 
+
+function rFib(num) {
+    if (num === 0) {
+        return 0
+    }
+    else if (num === 1) {
+        return 1
+    }
+    return rFib(num-1) + rFib(num-2)
+}
+
+// Recursive Binary Search
+// Given a sorted array and a value, recursively determine whether value is found within array. 
+// rBinarySearch([1,3,5,6],4) = false; 
+// rBinarySearch([4,5,6,8,12],5) = true.
+
+function rBinary(arr, value) {
+    var mid = Matth.floor(arr.length/2);
+    if (arr[mid] === value) {
+        return true;
+    }
 }
