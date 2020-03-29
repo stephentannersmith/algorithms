@@ -74,6 +74,7 @@ class BST {
         }
         return min
     }
+    // Create a max
     max() {
         var runner = this.root;
         var max = this.root.value;
@@ -85,7 +86,7 @@ class BST {
         }
         return max
     }
-
+    // Create isEmpty function that tells if the tree is empty. Check the root. 
     isEmpty() {
         if(this.root) {
             return false
